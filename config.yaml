@@ -1,6 +1,6 @@
 baseURL: "https://smc.im/"
 title: Choi's Notes
-languageCode: zh
+languageCode: zh-cn
 paginate: 10
 theme: PaperMod
 
@@ -25,7 +25,7 @@ params:
   keywords: [Blog, Hugo, PaperMod, 技术, 开发, 程序员, .NET, .NET Core, C#, Java, JavaScript, TypeScript, Vue, Angular, JS, Node.js, 视频号, 小红书]
   author: Eric
   # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "2006-01-02"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -79,7 +79,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "你好\U0001F44B！这是我的写字台。"
-    Content: 我会在这里记录工作，记录生活，记录情怀。
+    Content: 我会在这里记录工作，记录生活，以及一些好玩的。
 
   socialIcons:
     - name: twitter
@@ -91,13 +91,13 @@ params:
     - name: RSS
       url: "index.xml"
 
-  analytics:
-    google:
-      SiteVerificationTag: "XYZabc"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
+  # analytics:
+  #   google:
+  #     SiteVerificationTag: "XYZabc"
+  #   bing:
+  #     SiteVerificationTag: "XYZabc"
+  #   yandex:
+  #     SiteVerificationTag: "XYZabc"
 
   cover:
     hidden: true # hide everywhere but not in structured data
@@ -129,10 +129,14 @@ menu:
       name: 🏷️标签
       url: /tags/
       weight: 20
-    - identifier: aboutme
+    - identifier: about
       name: 🐼关于我
       url: /about/
       weight: 30
+    - identifier: friend
+      name: 👫友链
+      url: /friend/
+      weight: 40
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
