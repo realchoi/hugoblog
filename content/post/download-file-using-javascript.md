@@ -2,10 +2,8 @@
 title: 使用 JavaScript 下载文件
 slug: "download-file-using-javascript"
 date: 2018-12-06
-tags:
-  - JavaScript
-  - Web
-categories: [技术, 工作]
+tags: [JavaScript, Web]
+categories: [技术]
 draft: false
 ---
 

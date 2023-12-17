@@ -2,8 +2,8 @@
 title: "在 .net core 中实现下载文件的接口"
 slug: "a-download-file-api-in-aspnetcore"
 date: 2022-08-22T20:45:05+08:00
-tags: [.NET Core, WebApi, 文件流]
-categories: [技术, 工作]
+tags: [dotNET Core, WebApi, 文件流]
+categories: [技术]
 draft: false
 ---
 

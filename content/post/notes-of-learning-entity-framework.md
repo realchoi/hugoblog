@@ -2,10 +2,8 @@
 title: Entity Framework 学习笔记
 slug: "notes-of-learning-entity-framework"
 date: 2018-08-01
-tags: 
-  - .NET
-  - Entity Framwork
-categories: [技术, 工作]
+tags: [dotNET, Entity Framwork]
+categories: [技术]
 draft: false
 ---
 
