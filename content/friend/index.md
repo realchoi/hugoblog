@@ -13,4 +13,6 @@ disableShare: true
 
 {{< friend name="Sulv's Blog" url="https://www.sulvblog.cn" logo="https://www.sulvblog.cn/img/Q.gif" word="一个记录技术、阅读、生活的博客" >}}
 
+{{< friend name="Pseudoyu" url="https://www.pseudoyu.com/zh/" logo="https://www.pseudoyu.com/favicon.ico" word="Pseudoyu" >}}
+
 🤖如想交换友链，可以[点此](mailto:meetcds@foxmail.com)联系我~
