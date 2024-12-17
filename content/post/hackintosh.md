@@ -97,3 +97,13 @@ draft: false
 下面放一下我的 EFI 文件，有相同电脑配置的朋友可以自取，提取密码：`hackintosh`。
 
 OneDrive 链接：https://1drv.ms/u/c/dd23cc4b8ead9b66/ER9CXJkRc7ZOlIFuxO1z2zgBlgYkRqA2SS-alWRBF9NBbg?e=dsVykj
+
+
+
+### 致谢
+
+> 排名不分先后
+
+- 国光（https://apple.sqlsec.com/）
+- 大头菜（https://space.bilibili.com/16323318）
+- RapidEFI（https://github.com/JeoJay127/RapidEFI-Too）
