@@ -12,8 +12,8 @@ keywords:
 - integrity
 - 教程
 - tutorial
-description: "解决 hugo 博客报错：Failed to find a valid digest in the 'integrity' attribute for resource "xxx.css", The resource has been blocked."
-summary: "解决 hugo 博客报错：Failed to find a valid digest in the 'integrity' attribute for resource "xxx.css", The resource has been blocked."
+description: "解决 hugo 博客报错：Failed to find a valid digest in the 'integrity' attribute for resource `xxx.css`, The resource has been blocked."
+summary: "解决 hugo 博客报错：Failed to find a valid digest in the 'integrity' attribute for resource `xxx.css`, The resource has been blocked."
 draft: false
 ---
 
