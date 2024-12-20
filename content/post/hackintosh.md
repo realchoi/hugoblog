@@ -3,6 +3,12 @@ title: "给台式机安装了黑苹果系统"
 slug: "hackintosh-on-a-desktop-pc"
 tags: [Hackintosh, 黑苹果, macOS]
 categories: [数码]
+keywords:
+- 黑苹果
+- hackintosh
+- 教程
+- tutorial
+description: "黑苹果 hackintosh 安装教程"
 date: 2024-12-17T20:30:53+08:00
 lastmod: 2024-12-18T15:58:25+08:00
 draft: false
