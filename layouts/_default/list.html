@@ -69,11 +69,6 @@
       {{- .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h2>
-	{{- if .Params.description }}  <!-- 添加这一行 -->
-    <div class="post-description">  <!-- 添加这一行 -->
-      {{ .Params.description | markdownify }}  <!-- 添加这一行 -->
-    </div>  <!-- 添加这一行 -->
-    {{- end }}  <!-- 添加这一行 -->
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
