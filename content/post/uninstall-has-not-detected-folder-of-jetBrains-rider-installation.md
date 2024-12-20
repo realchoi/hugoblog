@@ -3,6 +3,14 @@ title: "Uninstall hasn't detected folder of JetBrains Rider installation"
 slug: "uninstall-has-not-detected-folder-of-jetBrains-rider-installation"
 tags: [JetBrains, IDEA, Rider]
 categories: [IDE]
+keywords:
+- JetBrains
+- IDEA
+- Rider
+- 教程
+- tutorial
+description: "解决卸载 JetBrains 家的 IDE 软件（如 Rider）时，遇到的找不到卸载程序的错误。"
+summary: "解决卸载 JetBrains 家的 IDE 软件（如 Rider）时，遇到的找不到卸载程序的错误。"
 date: 2023-08-07T15:10:12+08:00
 lastmod: 2023-08-07T15:10:12+08:00
 draft: false

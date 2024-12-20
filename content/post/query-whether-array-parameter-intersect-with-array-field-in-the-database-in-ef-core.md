@@ -3,6 +3,18 @@ title: "使用 EF Core 查询数组参数与数据库中的数组字段是否有
 slug: "query-whether-array-parameter-intersect-with-array-field-in-the-database-in-ef-core"
 tags: [entity framework, dotNET Core]
 categories: [技术]
+keywords:
+- entity framework
+- EF
+- dotnet
+- .net
+- dotNET Core
+- 开发
+- developer
+- 教程
+- tutorial
+description: "使用 EF Core 查询数据库数组之间的交集。"
+summary: "使用 EF Core 查询数据库数组之间的交集，场景举例：表 `student` 中有一个数组类型的字段 `hobbies`，用来记录某个学生的所有业余爱好，此时想要查询业余爱好中包含羽毛球、篮球、吉他的所有学生，即入参为数组 `hobbiesFilter`：`['羽毛球', '篮球', '吉他']`。"
 date: 2023-03-12T15:00:14+08:00
 lastmod: 2023-03-12T15:00:14+08:00
 draft: false

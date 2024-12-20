@@ -3,6 +3,15 @@ title: "Asp.Net Core WebApi 中多次读取请求数据"
 slug: "read-request-data-multiple-times-in-dotnetcore-webapi"
 tags: [dotNET, dotNET Core, WebApi]
 categories: [技术]
+keywords:
+- .net
+- dotNET
+- dotNET Core
+- WebApi
+- 教程
+- tutorial
+description: "怎样才能正确地重复读取 HttpContext.Request.Body 流对象？"
+summary: "怎样才能正确地重复读取 HttpContext.Request.Body 流对象？"
 date: 2022-10-09T19:57:12+08:00
 lastmod: 2022-10-09T19:57:12+08:00
 draft: false

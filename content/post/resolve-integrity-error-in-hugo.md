@@ -5,6 +5,15 @@ date: 2022-08-26T00:04:05+08:00
 lastmod: 2022-08-27T10:34:05+08:00
 tags: [Hugo, 博客, PaperMod]
 categories: [技术]
+keywords:
+- hugo
+- 博客
+- 报错
+- integrity
+- 教程
+- tutorial
+description: "解决 hugo 博客报错：Failed to find a valid digest in the 'integrity' attribute for resource "xxx.css", The resource has been blocked."
+summary: "解决 hugo 博客报错：Failed to find a valid digest in the 'integrity' attribute for resource "xxx.css", The resource has been blocked."
 draft: false
 ---
 

@@ -4,7 +4,8 @@ slug: "{{ replace .Name "-" " " | title }}"
 tags: []
 categories: []
 keywords: []
-description: ""
+description: "{{ replace .Name "-" " " | title }}"
+summary: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: false

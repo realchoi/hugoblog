@@ -8,8 +8,8 @@ keywords:
 - hackintosh
 - 教程
 - tutorial
-description: "黑苹果 hackintosh 安装教程"
-summary: "我的折腾：Intel i5 12400F 处理器、AMD RX 6600 显卡安装 macOS 15.2 黑苹果系统的过程记录"
+description: "我的折腾：Intel i5 12400F 处理器、AMD RX 6600 显卡安装 macOS 15.2 黑苹果系统（hackintosh）的过程记录。"
+summary: "我的折腾：Intel i5 12400F 处理器、AMD RX 6600 显卡安装 macOS 15.2 黑苹果系统（hackintosh）的过程记录。"
 date: 2024-12-17T20:30:53+08:00
 lastmod: 2024-12-18T15:58:25+08:00
 draft: false

@@ -3,6 +3,14 @@ title: "git 中的 cherry-pick 命令的使用方法"
 slug: "how-to-use-cherry-pick-command-in-git"
 tags: [git]
 categories: [技术]
+keywords:
+- git
+- cherry-pick
+- 优选提交
+- 教程
+- tutorial
+description: "总结一下 git cherry-pick（也被翻译为：优选提交）命令的使用。"
+summary: "总结一下 git cherry-pick（也被翻译为：优选提交）命令的使用。"
 date: 2023-07-17T14:51:56+08:00
 lastmod: 2023-07-17T14:51:56+08:00
 draft: false

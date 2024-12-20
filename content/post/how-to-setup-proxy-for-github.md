@@ -1,8 +1,17 @@
 ---
-title: "如何给 git 设置代理？"
-slug: "how-to-set-proxy-for-git"
+title: "如何给 github 设置代理？"
+slug: "how-to-setup-proxy-for-github"
 tags: [git, GitHub]
 categories: [技术]
+keywords:
+- git
+- github
+- 代理
+- proxy
+- 教程
+- tutorial
+description: "给 github 设置代理，以获得畅快的网络访问速度！"
+summary: "给 github 设置代理，以获得畅快的网络访问速度！"
 date: 2024-12-19T10:07:40+08:00
 lastmod: 2024-12-19T10:07:40+08:00
 draft: false

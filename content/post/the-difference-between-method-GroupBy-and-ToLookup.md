@@ -3,6 +3,16 @@ title: "GroupBy 方法和 ToLookup 方法之间的区别"
 slug: "the-difference-between-method-GroupBy-and-ToLookup"
 tags: [C#]
 categories: [技术]
+keywords:
+- C#
+- CSharp
+- C Sharp
+- 开发
+- developer
+- 教程
+- tutorial
+description: "C# 中的两个典型的分组函数：GroupBy 和 ToLookup 之间的区别。"
+summary: "C# 中的两个典型的分组函数：GroupBy 和 ToLookup 之间的区别。"
 date: 2023-01-31T15:13:57+08:00
 lastmod: 2023-01-31T15:13:57+08:00
 draft: false

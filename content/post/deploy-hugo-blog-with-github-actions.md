@@ -3,6 +3,16 @@ title: "使用 Github Actions 自动部署 hugo 博客"
 slug: "deploy-hugo-blog-with-github-actions"
 tags: [博客, hugo, Github Actions]
 categories: [技术, 博客]
+keywords:
+- hugo
+- 博客
+- Github Actions
+- CI
+- 持续集成
+- 教程
+- tutorial
+description: "使用 Github 自带的免费 CI 工具——Github Actions，实现网站的自动部署、文章的自动发布。"
+summary: "使用 Github 自带的免费 CI 工具——Github Actions，实现网站的自动部署、文章的自动发布。"
 date: 2023-12-17T13:03:07+08:00
 lastmod: 2023-12-17T13:03:07+08:00
 draft: false

@@ -3,6 +3,16 @@ title: "根据 IQueryable 对象得到其查询的 SQL 语句和参数"
 slug: "get-the-sql-statement-and-parameters-according-to-the-iqueryable-object"
 tags: [C#, Entity Framework]
 categories: [技术]
+keywords:
+- C#
+- Csharp
+- C Sharp
+- 开发
+- developer
+- 教程
+- tutorial
+description: "使用 Entity Framework 查询数据库得到的 IQueryable 对象，怎么得到它实际查询的 SQL 语句？"
+summary: "使用 Entity Framework 查询数据库得到的 IQueryable 对象，怎么得到它实际查询的 SQL 语句？"
 date: 2023-05-29T13:51:11+08:00
 lastmod: 2023-05-29T13:51:11+08:00
 draft: false
