@@ -11,10 +11,8 @@ hidemeta: true
 disableShare: true
 ---
 
-{{< friend name="Sulv's Blog" url="https://www.sulvblog.cn" logo="https://www.sulvblog.cn/img/Q.gif" word="一个记录技术、阅读、生活的博客" >}}
-
 {{< friend name="Pseudoyu" url="https://www.pseudoyu.com/zh/" logo="https://www.pseudoyu.com/favicon.ico" word="Pseudoyu" >}}
 
-以上都是我的*单链*，哈哈哈😂因为我觉得他们的博客都比较好，放进来时长学习一下~
+{{< friend name="囧囧 JOJO" url="https://blog.jojo.host/?source=smc_im" logo="https://blog.jojo.host/assets/images/favicons/favicon.png" word="囧囧 JOJO" >}}
 
 🤖如想交换友链，可以发送邮件到 meetcds(AT)foxmail.com 联系我~
