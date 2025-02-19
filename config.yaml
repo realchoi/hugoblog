@@ -21,8 +21,8 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Choi's Notes
-  description: "Eric Choi 的个人博客，日志，Blog, Hugo, PaperMod, 技术, 开发, 程序员, .NET, .NET Core, C#"
-  keywords: [Blog, Hugo, PaperMod, 技术, 开发, 程序员, .NET, .NET Core, C#, Java, JavaScript, TypeScript, Vue, Angular, JS, Node.js, 视频号, 小红书]
+  description: "Eric Choi 的个人博客，记录生活，记录技术，记录折腾"
+  keywords: [博客, Blog, Hugo, PaperMod, 技术, 开发, 程序员, .NET, .NET Core, C#, Java, JavaScript, TypeScript, Vue, Angular, JS, Node.js, 数码, 电脑, 手机, Apple, 苹果, macOS, iOS, iPhone, 安卓, Android, Windows, 微软, 视频号, 小红书]
   author: Eric
   # author: ["Me", "You"] # multiple authors
   # images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -83,7 +83,7 @@ params:
 
   socialIcons:
     - name: twitter
-      url: "https://twitter.com/poorcai"
+      url: "https://twitter.com/404"
     - name: github
       url: "https://github.com/realchoi"
     - name: email

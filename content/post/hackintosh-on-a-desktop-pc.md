@@ -11,7 +11,7 @@ keywords:
 description: "我的折腾：Intel i5 12400F 处理器、AMD RX 6600 显卡安装 macOS 15.2 黑苹果系统（hackintosh）的过程记录。"
 summary: "我的折腾：Intel i5 12400F 处理器、AMD RX 6600 显卡安装 macOS 15.2 黑苹果系统（hackintosh）的过程记录。"
 date: 2024-12-17T20:30:53+08:00
-lastmod: 2024-12-18T15:58:25+08:00
+lastmod: 2024-12-21T15:14:59+08:00
 draft: false
 ---
 
@@ -107,17 +107,49 @@ RapidEFI 的教程中，有关于 BIOS 配置的介绍，具体可以展开 `平
 
 ![hackintosh](https://s3.bmp.ovh/imgs/2024/12/17/26915029b074cc22.png)
 
-目前这台电脑运行良好，但是也有不足之处，比如，点击睡眠后，鼠标动一下又醒过来；当时睡眠了，但是过两个小时又自动醒了......
+目前这台电脑运行良好，~~但是也有不足之处，比如，点击睡眠后，鼠标动一下又醒过来；当时睡眠了，但是过两个小时又自动醒了......~~
 
-针对这些睡眠的问题，网上也有相关解决方案，我最近没有时间搞，就放一边了。
+~~针对这些睡眠的问题，网上也有相关解决方案，我最近没有时间搞，就放一边了。~~
+
+**2024/12/21 更新：**
+
+闲暇之余，我排查了一下我的电脑自动唤醒的原因，方法是使用终端执行命令：
+
+```bash
+log show --last 1d | grep "Wake reason"
+```
+
+该命令会返回最近一天内，电脑自动唤醒的原因。
+
+我这边自动唤醒的原因，主要是 `Wake reason: RTC (Alarm)`，针对该原因，可以使用以下方法完美解决：
+
+- 使用 OCAT 工具（OCAuxiliaryTools）打开 config.plist 文件
+
+- 侧边栏打开 `Kernal` 页面
+
+- 打开 `Patch` 选项卡
+
+- 点击右侧 `+` 号新增条目
+
+- 然后按照下面的内容进行填写：
+
+  | Identifier                | Base                                              | Comment                     | Count | Enabled | Replace |
+  | ------------------------- | ------------------------------------------------- | --------------------------- | ----- | ------- | ------- |
+  | com.apple.driver.AppleRTC | __ZN8AppleRTC18setupDateTimeAlarmEPK11RTCDateTime | Disable RTC wake scheduling | 1     | true    | C3      |
+
+- 保存配置，然后重启电脑，正常情况下基本上就生效了。
+
+可以参考以下截图进行操作：
+
+![配置 config.plist](https://s3.bmp.ovh/imgs/2024/12/21/1c49c1376914b1ba.png)
 
 
 
 ### 分享我的 EFI
 
-下面放一下我的 EFI 文件，有相同电脑配置的朋友可以自取，提取密码：`hackintosh`。
+下面放一下我的 EFI 文件（已解决睡眠自动唤醒的问题），有相同电脑配置的朋友可以自取，提取密码：`hackintosh`。
 
-OneDrive 链接：[点我 (Click Here)](https://1drv.ms/u/c/dd23cc4b8ead9b66/ER9CXJkRc7ZOlIFuxO1z2zgBlgYkRqA2SS-alWRBF9NBbg?e=dsVykj)
+OneDrive 链接：[点我 (Click Here)](https://1drv.ms/u/c/dd23cc4b8ead9b66/Ebn5MZnNzX1BoOzA0u-fd94BfV4gf-40UUa6OpXUUUdvsw?e=YUGEZ7)
 
 
 
