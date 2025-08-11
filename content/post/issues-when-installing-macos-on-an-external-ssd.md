@@ -26,15 +26,15 @@ draft: false
 
 拍了几张硬盘盒的照片，和 Mac mini 搭配起来，还是挺好看的：
 
-<img src="https://s3.bmp.ovh/imgs/2025/08/11/6efb230ffc0b20fd.jpg" alt="ITGZ 硬盘盒" style="zoom:25%;" />
+![ITGZ 硬盘盒](https://s3.bmp.ovh/imgs/2025/08/11/6efb230ffc0b20fd.jpg)
 
-<img src="https://s3.bmp.ovh/imgs/2025/08/11/9636214d263035da.jpg" alt="ITGZ 硬盘盒" style="zoom:25%;" />
 
-<img src="https://s3.bmp.ovh/imgs/2025/08/11/1726998094b19d76.jpg" alt="ITGZ 硬盘盒" style="zoom: 25%;" />
+
+![ITGZ 硬盘盒](https://s3.bmp.ovh/imgs/2025/08/11/1726998094b19d76.jpg)
 
 西数的 SN7100 属于黑盘梯队，PCIE4.0 协议，理论速度说是可以达到 7200MB/s，我将其装在硬盘盒上，然后插在雷雳 4 接口上，测试的速度受限于盒子、线材、接口等等，读写在 2800MB/s 左右，还是可以接受的：
 
-<img src="https://s3.bmp.ovh/imgs/2025/08/11/2428c5f02a4c8355.png" alt="硬盘速度" style="zoom: 50%;" />
+![硬盘测速结果](https://s3.bmp.ovh/imgs/2025/08/11/2428c5f02a4c8355.png)
 
 然后我就在外置硬盘中准备安装系统了，具体的安装方法这里不再展开，特别简单，而且网上很多详细的教程。我只记录一下其中遇到的问题。
 
@@ -42,7 +42,7 @@ draft: false
 
 看网上的教程，操作都特别简单，还以为自己也可以顺畅完成安装呢，却没想到第一步就卡住了：
 
-<img src="https://s3.bmp.ovh/imgs/2025/08/11/b8aa83eb83a7468c.jpeg" alt="空间不足" style="zoom: 67%;" />
+![宗卷空间不足](https://s3.bmp.ovh/imgs/2025/08/11/b8aa83eb83a7468c.jpeg)
 
 看到这个提示，我有点懵：这个新买的 SSD 显示的可用空间将近 1TB，为什么还提示空间不足？网上搜了一下也没搜到，我前后尝试了好几次“抹掉”（格式化）硬盘，依然不行，我有点心慌了，还以为是 SSD 出了问题。于是在一个论坛发个[帖子](https://linux.do/t/topic/855784)问了一下，没想到有大佬给出了排查思路：是不是原磁盘空间不太够了？
 
