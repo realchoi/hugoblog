@@ -268,7 +268,7 @@ function main(config) {
 - Application: `com.google.antigravity.helper;com.google.antigravity;Antigravity;language_server_macos_arm;` (根据实际进程名添加，如果是 Intel 芯片的 Mac，则需要将最后一项改为 `language_server_macos_x64`)
 - Action: `Proxy HTTP 127.0.0.1:7890`
 
-![](https://s3.bmp.ovh/imgs/2025/11/26/2722706a093b118a.png)
+![](https://s3.bmp.ovh/imgs/2025/11/26/ac5d8fa967b78e43.png)
 
 这样能在不开启 Tun 的情况下，强行让 Antigravity 走代理。但这种方式需要多开一个 Proxifier App，所以个人更推荐方案 A。
 
