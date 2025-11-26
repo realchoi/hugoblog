@@ -17,6 +17,8 @@ lastmod: 2025-11-26T11:01:32+08:00
 draft: false 
 ---
 
+最近为了解决 Google Antigravity 网络问题，捣鼓了一下电脑的网络配置。
+
 ## 背景与起因
 
 最近在 macOS 上开发时遇到一个很烦人的网络冲突问题。
@@ -266,7 +268,7 @@ function main(config) {
 - Application: `com.google.antigravity.helper;com.google.antigravity;Antigravity;language_server_macos_arm;` (根据实际进程名添加，如果是 Intel 芯片的 Mac，则需要将最后一项改为 `language_server_macos_x64`)
 - Action: `Proxy HTTP 127.0.0.1:7890`
 
-![](https://s3.bmp.ovh/imgs/2025/11/26/67a9923dd2296908.png)
+![](https://s3.bmp.ovh/imgs/2025/11/26/2722706a093b118a.png)
 
 这样能在不开启 Tun 的情况下，强行让 Antigravity 走代理。但这种方式需要多开一个 Proxifier App，所以个人更推荐方案 A。
 
@@ -275,6 +277,10 @@ function main(config) {
 ## 总结
 
 这套方案把“脏乱差”的 VPN 客户端关进了 Docker，还给了 macOS 一个清爽的网络环境。 虽然前期配置稍微麻烦点（写 Compose、配 Clash），但一旦跑通，后续的使用体验就是无感的。不再需要手动开关软件，也不用担心路由表爆炸，这才是开发环境该有的样子。
+
+**注意**：我在本文前面提到，我本来以为 aTrust 和 Clash Tun 这两者共存也没什么大问题，但是后来别人提醒，**aTrust 只要启动了，无论是否退出，都会有进程在后台监控流量**。虽然“在后台监控流量”这件事，我没有去验证，但是我确实发现，当完全退出 aTrust 后，在 macOS 自带的活动监视器中，发现仍然有名为 `aTrust Agent` 的进程在后台活跃，这就让我产生了疑心。
+
+所以，我最终决定，无论是否使用 Clash Tun 模式，aTrust 这个垃圾软件，注定必须要使用 Docker 容器隔离了。
 
 
 
