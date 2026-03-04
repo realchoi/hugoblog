@@ -140,6 +140,9 @@ menu:
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
+  goldmark:
+    renderer:
+      unsafe: true # 允许在 Markdown 中使用原生 HTML
   highlight:
     noClasses: false
     # anchorLineNos: true
