@@ -13,6 +13,10 @@ keywords:
 - tutorial
 description: "在 C# 中，当我们需要按照自己的方式，对两个对象进行比较时，需要自定义对象比较器。"
 summary: "在 C# 中，当我们需要按照自己的方式，对两个对象进行比较时，需要自定义对象比较器。"
+cover:
+  image: "/covers/custom-dynamic-object-comparator-in-csharp.svg"
+  alt: "在 C# 中自定义动态对象比较器封面"
+  relative: false
 date: 2023-06-09T14:34:44+08:00
 lastmod: 2023-06-09T14:34:44+08:00
 draft: false

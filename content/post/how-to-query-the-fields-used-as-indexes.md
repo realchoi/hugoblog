@@ -1,6 +1,13 @@
 ---
 title: "如何在 PostgreSQL 中查询作为索引的字段"
 date: 2022-08-26T20:56:34+08:00
+lastmod: 2022-08-26T20:56:34+08:00
+description: "介绍在 PostgreSQL 中查询哪些字段建立了索引，便于排查与优化数据库。"
+summary: "介绍在 PostgreSQL 中查询哪些字段建立了索引，便于排查与优化数据库。"
+cover:
+  image: "/covers/how-to-query-the-fields-used-as-indexes.svg"
+  alt: "如何在 PostgreSQL 中查询作为索引的字段封面"
+  relative: false
 tags: ["PostgreSQL", "Database", "数据库", "索引"]
 categories: ["技术"]
 draft: false

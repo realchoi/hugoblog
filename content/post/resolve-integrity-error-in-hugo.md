@@ -14,6 +14,10 @@ keywords:
 - tutorial
 description: "解决 hugo 博客报错：Failed to find a valid digest in the 'integrity' attribute for resource `xxx.css`, The resource has been blocked."
 summary: "解决 hugo 博客报错：Failed to find a valid digest in the 'integrity' attribute for resource `xxx.css`, The resource has been blocked."
+cover:
+  image: "/covers/hugo-integrity-error.svg"
+  alt: "解决 Hugo Integrity 报错封面"
+  relative: false
 draft: false
 ---
 

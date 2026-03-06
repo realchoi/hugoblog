@@ -11,6 +11,10 @@ keywords:
 - tutorial
 description: "解决卸载 JetBrains 家的 IDE 软件（如 Rider）时，遇到的找不到卸载程序的错误。"
 summary: "解决卸载 JetBrains 家的 IDE 软件（如 Rider）时，遇到的找不到卸载程序的错误。"
+cover:
+  image: "/covers/uninstall-has-not-detected-folder-of-jetbrains-rider-installation.svg"
+  alt: "JetBrains Rider 卸载程序报错封面"
+  relative: false
 date: 2023-08-07T15:10:12+08:00
 lastmod: 2023-08-07T15:10:12+08:00
 draft: false

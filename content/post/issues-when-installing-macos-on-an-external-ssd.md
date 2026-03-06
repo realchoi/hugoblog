@@ -11,6 +11,10 @@ keywords:
 - digital
 description: "此文记录一下给 Mac mini 在外接硬盘中安装 macOS 系统时遇到的一些问题。"
 summary: "此文记录一下给 Mac mini 在外接硬盘中安装 macOS 系统时遇到的一些问题。"
+cover:
+  image: "/covers/macos-external-ssd.svg"
+  alt: "外接 SSD 安装 macOS 问题排查封面"
+  relative: false
 date: 2025-08-11T14:43:50+08:00
 lastmod: 2025-08-11T14:43:50+08:00
 draft: false 

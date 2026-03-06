@@ -12,6 +12,10 @@ keywords:
 - tutorial
 description: "给 github 设置代理，以获得畅快的网络访问速度！"
 summary: "给 github 设置代理，以获得畅快的网络访问速度！"
+cover:
+  image: "/covers/github-proxy.svg"
+  alt: "如何给 GitHub 设置代理封面"
+  relative: false
 date: 2024-12-19T10:07:40+08:00
 lastmod: 2024-12-19T10:07:40+08:00
 draft: false
@@ -29,7 +33,7 @@ draft: false
 
 依次打开：控制面板 - 网络和 Internet - Internet 选项 - 切换到`连接`选项卡 - 局域网设置，就能看到具体的地址了。
 
-![](https://s3.bmp.ovh/imgs/2024/12/19/98c01f3853e66a92.png)
+![Windows 代理设置里查看本地代理端口截图](https://s3.bmp.ovh/imgs/2024/12/19/98c01f3853e66a92.png)
 
 **其次**，使用命令行设置代理地址：
 

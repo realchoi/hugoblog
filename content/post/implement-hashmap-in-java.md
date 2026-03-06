@@ -2,6 +2,13 @@
 title: 使用 Java 实现 HashMap
 slug: "implement-hashmap-in-java"
 date: 2018-06-02
+lastmod: 2018-06-02
+description: "用 Java 手写 HashMap，理解数组、链表与哈希寻址等核心实现思路。"
+summary: "用 Java 手写 HashMap，理解数组、链表与哈希寻址等核心实现思路。"
+cover:
+  image: "/covers/implement-hashmap-in-java.svg"
+  alt: "使用 Java 实现 HashMap 封面"
+  relative: false
 tags: 
   - 数据结构
   - HashMap

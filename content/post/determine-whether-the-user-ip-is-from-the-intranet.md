@@ -2,6 +2,13 @@
 title: 根据 IP 判断访问页面的用户是否来自内网
 slug: "determine-whether-the-user-ip-is-from-the-intranet"
 date: 2017-11-30
+lastmod: 2017-11-30
+description: "介绍如何根据 IP 判断用户是否来自内网，可用于页面展示和访问控制场景。"
+summary: "介绍如何根据 IP 判断用户是否来自内网，可用于页面展示和访问控制场景。"
+cover:
+  image: "/covers/determine-whether-the-user-ip-is-from-the-intranet.svg"
+  alt: "根据 IP 判断访问页面的用户是否来自内网封面"
+  relative: false
 tags: 
   - IP
   - 局域网

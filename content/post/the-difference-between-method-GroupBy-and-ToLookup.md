@@ -13,6 +13,10 @@ keywords:
 - tutorial
 description: "C# 中的两个典型的分组函数：GroupBy 和 ToLookup 之间的区别。"
 summary: "C# 中的两个典型的分组函数：GroupBy 和 ToLookup 之间的区别。"
+cover:
+  image: "/covers/the-difference-between-method-groupby-and-tolookup.svg"
+  alt: "GroupBy 方法和 ToLookup 方法之间的区别封面"
+  relative: false
 date: 2023-01-31T15:13:57+08:00
 lastmod: 2023-01-31T15:13:57+08:00
 draft: false

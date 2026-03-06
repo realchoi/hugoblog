@@ -1,12 +1,19 @@
 ---
 title: "Shadowsocks 一键安装脚本（四合一）"
 slug: "shadowsocks-installation-scripts"
+description: "介绍 Shadowsocks 四合一一键安装脚本的适用环境、安装步骤与基本使用方式。"
+summary: "介绍 Shadowsocks 四合一一键安装脚本的适用环境、安装步骤与基本使用方式。"
+cover:
+  image: "/covers/shadowsocks-4-in-1.svg"
+  alt: "Shadowsocks 一键安装脚本四合一封面"
+  relative: false
 tags: [Shadowsocks, 防火墙]
 date: 2017-06-02
+lastmod: 2017-06-02
 categories: [技术]
 draft: false
 ---
-![](https://ws1.sinaimg.cn/large/005Ib0ZLgy1fjcgxosy6mj30p00dwdg3.jpg)
+![Shadowsocks 四合一一键安装脚本配图](https://ws1.sinaimg.cn/large/005Ib0ZLgy1fjcgxosy6mj30p00dwdg3.jpg)
 
 ## 前言
 

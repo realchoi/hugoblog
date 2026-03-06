@@ -13,6 +13,10 @@ keywords:
 - tutorial
 description: "使用 Github 自带的免费 CI 工具——Github Actions，实现网站的自动部署、文章的自动发布。"
 summary: "使用 Github 自带的免费 CI 工具——Github Actions，实现网站的自动部署、文章的自动发布。"
+cover:
+  image: "/covers/hugo-github-actions.svg"
+  alt: "使用 GitHub Actions 自动部署 Hugo 封面"
+  relative: false
 date: 2023-12-17T13:03:07+08:00
 lastmod: 2023-12-17T13:03:07+08:00
 draft: false
@@ -91,11 +95,11 @@ jobs:
 
 此外，因为我们需要从 .md 源文件的仓库 1 推送到外部 GitHub Pages 仓库 2，需要特定权限，所以还得在 GitHub 账户 `Setting - Developer settings - Personal access tokens` （https://github.com/settings/tokens）下创建一个 Token：
 
-![](https://s3.bmp.ovh/imgs/2023/12/17/ef724c440fa25a97.png)
+![GitHub 创建 Personal Access Token 页面截图](https://s3.bmp.ovh/imgs/2023/12/17/ef724c440fa25a97.png)
 
 将权限设置为开启 `repo` 与 `workflow`：
 
-![](https://s3.bmp.ovh/imgs/2023/12/17/5a75ae00657ee9fe.png)
+![GitHub Token 权限勾选 repo 和 workflow 截图](https://s3.bmp.ovh/imgs/2023/12/17/5a75ae00657ee9fe.png)
 
 最后在我们的 .md 源文件的仓库 1 中添加一个 secret，名称为 `deploy.yml` 中的 `PERSONAL_TOKEN`，值为上一步生成的 token。
 

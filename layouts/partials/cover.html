@@ -26,9 +26,13 @@
         <img loading="lazy" src="{{ (path.Join .RelPermalink .Params.cover.image) | absURL }}" alt="{{ $alt }}">
         {{- end }}
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
-        {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank"
+        {{- $coverSrc := .Params.cover.image -}}
+        {{- if not (urls.Parse $coverSrc).IsAbs -}}
+            {{- $coverSrc = $coverSrc | relURL -}}
+        {{- end -}}
+        {{- if $addLink }}<a href="{{ $coverSrc }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
-            <img loading="lazy" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
+            <img loading="lazy" src="{{ $coverSrc }}" alt="{{ $alt }}">
     {{- end }}
     {{- if $addLink }}</a>{{ end -}}
     {{/*  Display Caption  */}}

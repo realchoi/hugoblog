@@ -1,9 +1,16 @@
 ---
 title: "从节日礼物窥探当前处境变化"
 slug: "a-glimpse-of-current-changes-in-the-situation-from-holiday-gifts"
+description: "以端午礼物和公司细节为切口，聊聊工作处境变化与对公司状态的观察。"
+summary: "以端午礼物和公司细节为切口，聊聊工作处境变化与对公司状态的观察。"
+cover:
+  image: "/covers/a-glimpse-of-current-changes-in-the-situation-from-holiday-gifts.svg"
+  alt: "从节日礼物窥探当前处境变化封面"
+  relative: false
 tags: [端午节, 工作, 随笔]
 categories: [生活, 工作]
 date: 2022-06-02T20:38:03+08:00
+lastmod: 2022-06-02T20:38:03+08:00
 draft: false
 ---
 

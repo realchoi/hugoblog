@@ -1,6 +1,12 @@
 ---
 title: "在 .net 6 中重复读取请求参数 body"
 slug: "repeated-reading-of-request-parameter-body-in-dotnet6"
+description: "讲解在 .NET 6 中重复读取 Request.Body 的正确方式，核心是 EnableBuffering 的使用。"
+summary: "讲解在 .NET 6 中重复读取 Request.Body 的正确方式，核心是 EnableBuffering 的使用。"
+cover:
+  image: "/covers/dotnet6-request-body.svg"
+  alt: ".NET 6 重复读取 Request.Body 封面"
+  relative: false
 tags: [dotNET Core, 文件流]
 categories: [技术]
 date: 2022-12-06T14:37:16+08:00

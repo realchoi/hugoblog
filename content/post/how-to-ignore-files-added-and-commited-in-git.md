@@ -11,6 +11,10 @@ keywords:
 - tutorial
 description: "提交完 git 仓库后，发现没有创建 `.gitignore` 文件，导致将所有文件都推送到了仓库，此时想要再通过创建 `.gitignore` 文件来忽略，会发现并不会直接生效。"
 summary: "提交完 git 仓库后，发现没有创建 `.gitignore` 文件，导致将所有文件都推送到了仓库，此时想要再通过创建 `.gitignore` 文件来忽略，会发现并不会直接生效。"
+cover:
+  image: "/covers/git-ignore-tracked-files.svg"
+  alt: "Git 忽略已提交文件方法封面"
+  relative: false
 date: 2024-12-20T14:48:59+08:00
 lastmod: 2024-12-20T14:48:59+08:00
 draft: false 

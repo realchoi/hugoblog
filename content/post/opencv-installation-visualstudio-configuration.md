@@ -1,10 +1,17 @@
 ---
 title: "OpenCV 的安装与 Visual Studio 环境的配置"
 slug: "opencv-installation-visualstudio-configuration"
+description: "记录 OpenCV 的安装过程，以及在 Visual Studio 中配置开发环境的方法。"
+summary: "记录 OpenCV 的安装过程，以及在 Visual Studio 中配置开发环境的方法。"
+cover:
+  image: "/covers/opencv-installation-visualstudio-configuration.svg"
+  alt: "OpenCV 的安装与 Visual Studio 环境配置封面"
+  relative: false
 tags: 
   - OpenCV
   - Visual Studio
 date: 2017-05-06
+lastmod: 2017-05-06
 categories: [技术]
 draft: false
 ---
@@ -24,7 +31,7 @@ draft: false
 
 打开 OpenCV 官方的下载地址：<http://opencv.org/releases.html>，选择对应的版本即可直接下载。下载完成后，直接双击文件，会提示解压到某个地方，比如 D:\opencv249 ，然后点击 Extract 按钮。稍候几分钟，在 D:\opencv249 下就会得到一个 opencv 文件夹，里面就是 OpenCV 的各种文件了。
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffby718pfaj20pq06kdgo.jpg)
+![OpenCV 压缩包解压安装界面截图](https://ws1.sinaimg.cn/large/df837310gy1ffby718pfaj20pq06kdgo.jpg)
 <br>
 ## 配置环境变量
 
@@ -40,23 +47,23 @@ draft: false
 
 【1】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbysno8n1j20ag0br4hk.jpg)
+![Windows 打开系统属性界面截图](https://ws1.sinaimg.cn/large/df837310gy1ffbysno8n1j20ag0br4hk.jpg)
 
 【2】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbytmvensj20qa0ga3zw.jpg)
+![Windows 高级系统设置界面截图](https://ws1.sinaimg.cn/large/df837310gy1ffbytmvensj20qa0ga3zw.jpg)
 
 【3】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbytvfge4j20db0gmdg8.jpg)
+![Windows 环境变量设置界面截图](https://ws1.sinaimg.cn/large/df837310gy1ffbytvfge4j20db0gmdg8.jpg)
 
 【4】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbyu7q9l1j20h60ibq3p.jpg)
+![系统 Path 变量编辑界面截图](https://ws1.sinaimg.cn/large/df837310gy1ffbyu7q9l1j20h60ibq3p.jpg)
 
 【5】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbyuh24uqj20en0fn0ta.jpg)
+![OpenCV bin 路径加入 Path 的界面截图](https://ws1.sinaimg.cn/large/df837310gy1ffbyuh24uqj20en0fn0ta.jpg)
 <br>
 ## 工程包含目录（include）的配置
 
@@ -72,31 +79,31 @@ draft: false
 
 【1】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbzh7tp9oj20q50fzabf.jpg)
+![Visual Studio 新建 Win32 控制台项目截图](https://ws1.sinaimg.cn/large/df837310gy1ffbzh7tp9oj20q50fzabf.jpg)
 
 【2】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbzhk1bshj20ij0dgq33.jpg)
+![Visual Studio 勾选空项目截图](https://ws1.sinaimg.cn/large/df837310gy1ffbzhk1bshj20ij0dgq33.jpg)
 
 【3】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbzhtlqcdj20ij0dg0sz.jpg)
+![Visual Studio 打开属性管理器截图](https://ws1.sinaimg.cn/large/df837310gy1ffbzhtlqcdj20ij0dg0sz.jpg)
 
 【4】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbzi20abtj211y0lc42d.jpg)
+![Microsoft.Cpp.Win32.user 属性页截图](https://ws1.sinaimg.cn/large/df837310gy1ffbzi20abtj211y0lc42d.jpg)
 
 【5】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbziagkmfj211y0kgdh9.jpg)
+![VC++ 目录中的包含目录配置截图](https://ws1.sinaimg.cn/large/df837310gy1ffbziagkmfj211y0kgdh9.jpg)
 
 【6】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbziil12vj20oe0ghjsi.jpg)
+![添加 OpenCV include 目录截图](https://ws1.sinaimg.cn/large/df837310gy1ffbziil12vj20oe0ghjsi.jpg)
 
 【7】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbziqplcpj20bq0b23yn.jpg)
+![OpenCV include 目录配置完成截图](https://ws1.sinaimg.cn/large/df837310gy1ffbziqplcpj20bq0b23yn.jpg)
 <br>
 
 ## 工程库（lib）目录的配置
@@ -113,17 +120,17 @@ draft: false
 
 【6】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbzsa7yu0j20oe0gh0tu.jpg)
+![VC++ 目录中的库目录配置截图](https://ws1.sinaimg.cn/large/df837310gy1ffbzsa7yu0j20oe0gh0tu.jpg)
 
 【7】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbzsnwbpnj20bq0b2aa6.jpg)
+![添加 OpenCV lib 目录截图](https://ws1.sinaimg.cn/large/df837310gy1ffbzsnwbpnj20bq0b2aa6.jpg)
 <br>
 ## 链接库的配置
 
 依然是“属性管理器”工作区中，双击（或者右键属性）【Microsoft.Cpp.Win32.user】→【通用属性】 →【链接器】→【输入】→【附加的依赖项】
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffbzxliyazj20oe0gh758.jpg)
+![链接器附加依赖项配置截图](https://ws1.sinaimg.cn/large/df837310gy1ffbzxliyazj20oe0gh758.jpg)
 
 对于【OpenCV2.4.9】，添加如下 249 版本的 lib（这样的 lib 顺序是：19个带 ``d`` 的 debug 版的 lib 写在前面，19 个不带 ``d`` 的 release 版的 lib 写在后面）：
 
@@ -167,7 +174,7 @@ opencv_imgproc249.lib
 opencv_legacy249.lib
 opencv_ml249.lib
 
-![](https://ws1.sinaimg.cn/large/df837310gy1ffc019g5dqj20bq0dc74h.jpg)
+![OpenCV 链接库列表配置截图](https://ws1.sinaimg.cn/large/df837310gy1ffc019g5dqj20bq0dc74h.jpg)
 
 
 对于【OpenCV 3.0】，添加 3.0 版本的 lib ，新版的 lib 非常简单。想用 debug 版本的库，添加 opencv_ts300d.lib 和  opencv_world300d.lib 即可。

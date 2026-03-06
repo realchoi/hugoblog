@@ -1,6 +1,12 @@
 ---
 title: "Asp.Net Core WebApi 接口入参默认值"
 slug: "default-value-of-parameters-in-dotnetcore-webapi"
+description: "讲解 Asp.Net Core WebApi 接口参数默认值的处理方式与模型绑定注意点。"
+summary: "讲解 Asp.Net Core WebApi 接口参数默认值的处理方式与模型绑定注意点。"
+cover:
+  image: "/covers/default-value-of-parameters-in-dotnetcore-webapi.svg"
+  alt: "Asp.Net Core WebApi 接口入参默认值封面"
+  relative: false
 tags: [dotNET, dotNET Core, WebApi]
 categories: [技术]
 date: 2022-11-09T20:13:15+08:00
@@ -34,7 +40,7 @@ public int PageSize { get; set; } = 10;
 
 这样我们在打开 swagger 页面查看接口的时候，就能看到这两个参数的默认值：
 
-![](https://s3.bmp.ovh/imgs/2022/09/28/b4cec3f367e0d5d9.png)
+![Swagger 页面展示接口参数默认值截图](https://s3.bmp.ovh/imgs/2022/09/28/b4cec3f367e0d5d9.png)
 
 然后我们在 swagger 中模拟调用的时候就可以将这两个默认值自动带上。
 

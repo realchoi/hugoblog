@@ -2,6 +2,13 @@
 title: 使用 Java 实现单向链表
 slug: "implement-single-linkedlist-in-java"
 date: 2018-04-10
+lastmod: 2018-04-10
+description: "用 Java 手写单向链表，说明节点结构、增删查改与链表遍历的基本实现。"
+summary: "用 Java 手写单向链表，说明节点结构、增删查改与链表遍历的基本实现。"
+cover:
+  image: "/covers/implement-single-linkedlist-in-java.svg"
+  alt: "使用 Java 实现单向链表封面"
+  relative: false
 tags: 
   - 数据结构
   - 链表

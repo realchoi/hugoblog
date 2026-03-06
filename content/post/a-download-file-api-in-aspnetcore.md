@@ -2,6 +2,13 @@
 title: "在 .net core 中实现下载文件的接口"
 slug: "a-download-file-api-in-aspnetcore"
 date: 2022-08-22T20:45:05+08:00
+lastmod: 2022-08-22T20:45:05+08:00
+description: "总结 Asp.Net Core 下载文件接口的实现方式、流返回方案与常见问题。"
+summary: "总结 Asp.Net Core 下载文件接口的实现方式、流返回方案与常见问题。"
+cover:
+  image: "/covers/a-download-file-api-in-aspnetcore.svg"
+  alt: "在 .NET Core 中实现下载文件接口封面"
+  relative: false
 tags: [dotNET Core, WebApi, 文件流]
 categories: [技术]
 draft: false

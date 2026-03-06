@@ -10,6 +10,10 @@ keywords:
 - tutorial
 description: "我的折腾：Intel i5 12400F 处理器、AMD RX 6600 显卡安装 macOS 15.2 黑苹果系统（hackintosh）的过程记录。"
 summary: "我的折腾：Intel i5 12400F 处理器、AMD RX 6600 显卡安装 macOS 15.2 黑苹果系统（hackintosh）的过程记录。"
+cover:
+  image: "/covers/hackintosh-desktop.svg"
+  alt: "给台式机安装黑苹果系统封面"
+  relative: false
 date: 2024-12-17T20:30:53+08:00
 lastmod: 2024-12-21T15:14:59+08:00
 draft: false
@@ -67,7 +71,7 @@ draft: false
 
 如果你对不玩游戏（本来也不推荐在 macOS 上玩游戏）、不剪辑高清视频，总之不搞一些很消耗显卡资源的事情，买一个老点的 AMD 显卡，也是可以的，特别是对于仅仅用来写代码的程序员来说，显卡的作用不是特别重要。
 
-![](https://s3.bmp.ovh/imgs/2024/12/18/eec661a51e9fcc66.webp)
+![黑苹果装机所用显卡照片](https://s3.bmp.ovh/imgs/2024/12/18/eec661a51e9fcc66.webp)
 
 
 

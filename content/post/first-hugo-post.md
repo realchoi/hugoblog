@@ -1,9 +1,16 @@
 ---
 title: "我的第一篇 hugo 博客"
 slug: "first-hugo-post"
+description: "记录从 Hexo 迁移到 Hugo 后写下的第一篇文章，也是博客重新开始的起点。"
+summary: "记录从 Hexo 迁移到 Hugo 后写下的第一篇文章，也是博客重新开始的起点。"
+cover:
+  image: "/covers/first-hugo-post.svg"
+  alt: "我的第一篇 Hugo 博客封面"
+  relative: false
 tags: [博客, hugo, 攒机]
 categories: [生活]
 date: 2022-05-28T09:14:49+08:00
+lastmod: 2022-05-28T09:14:49+08:00
 draft: false
 ---
 

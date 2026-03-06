@@ -2,6 +2,13 @@
 title: 使用 JavaScript 下载文件
 slug: "download-file-using-javascript"
 date: 2018-12-06
+lastmod: 2018-12-06
+description: "绕开 ajax 下载限制时，模拟表单提交往往是更稳的方案"
+summary: "绕开 ajax 下载限制时，模拟表单提交往往是更稳的方案"
+cover:
+  image: "/covers/download-file-using-javascript.svg"
+  alt: "使用 JavaScript 下载文件封面"
+  relative: false
 tags: [JavaScript, Web]
 categories: [技术]
 draft: false

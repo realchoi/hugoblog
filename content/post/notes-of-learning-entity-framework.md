@@ -2,6 +2,13 @@
 title: Entity Framework 学习笔记
 slug: "notes-of-learning-entity-framework"
 date: 2018-08-01
+lastmod: 2018-08-01
+description: "把零散知识点整理成能反复翻阅的一份 EF 入门与回顾记录"
+summary: "把零散知识点整理成能反复翻阅的一份 EF 入门与回顾记录"
+cover:
+  image: "/covers/notes-of-learning-entity-framework.svg"
+  alt: "Entity Framework 学习笔记封面"
+  relative: false
 tags: [dotNET, Entity Framwork]
 categories: [技术]
 draft: false

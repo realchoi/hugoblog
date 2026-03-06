@@ -12,6 +12,10 @@ keywords:
 - tutorial
 description: "怎样才能正确地重复读取 HttpContext.Request.Body 流对象？"
 summary: "怎样才能正确地重复读取 HttpContext.Request.Body 流对象？"
+cover:
+  image: "/covers/aspnetcore-read-request-body.svg"
+  alt: "ASP.NET Core WebApi 多次读取请求数据封面"
+  relative: false
 date: 2022-10-09T19:57:12+08:00
 lastmod: 2022-10-09T19:57:12+08:00
 draft: false

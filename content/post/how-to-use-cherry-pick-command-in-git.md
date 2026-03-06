@@ -11,6 +11,10 @@ keywords:
 - tutorial
 description: "总结一下 git cherry-pick（也被翻译为：优选提交）命令的使用。"
 summary: "总结一下 git cherry-pick（也被翻译为：优选提交）命令的使用。"
+cover:
+  image: "/covers/how-to-use-cherry-pick-command-in-git.svg"
+  alt: "git 中的 cherry-pick 命令使用方法封面"
+  relative: false
 date: 2023-07-17T14:51:56+08:00
 lastmod: 2023-07-17T14:51:56+08:00
 draft: false

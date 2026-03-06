@@ -1,6 +1,12 @@
 ---
 title: "在小米手机上使用 Google Voice 时提示“加载对话时出错，请重试”"
 slug: "google-voice-prompts-error-loading-conversation-on-xiaomi-phone"
+description: "记录小米手机使用 Google Voice 时“加载对话出错”的现象与排查思路。"
+summary: "记录小米手机使用 Google Voice 时“加载对话出错”的现象与排查思路。"
+cover:
+  image: "/covers/google-voice-prompts-error-loading-conversation-on-xiaomi-phone.svg"
+  alt: "Google Voice 在小米手机上加载对话出错封面"
+  relative: false
 tags: [小米, Google Voice, GV]
 categories: [数码]
 date: 2022-11-16T20:37:15+08:00
@@ -22,7 +28,7 @@ draft: false
 
 ### 解决
 在桌面上长按 Google Voice 图标，然后在弹出的菜单中依次点击`应用信息`、`权限管理`、`获取手机信息`，最后在弹窗中选择`始终允许`，就会发现 Google Voice 复活了......🥲
-![](https://s3.bmp.ovh/imgs/2022/11/16/841ec5bd0ad48b3f.jpg)
+![小米手机中 Google Voice 权限设置截图](https://s3.bmp.ovh/imgs/2022/11/16/841ec5bd0ad48b3f.jpg)
 
 ### 参考
 

@@ -15,6 +15,10 @@ keywords:
 - tutorial
 description: "使用 EF Core 查询数据库数组之间的交集。"
 summary: "使用 EF Core 查询数据库数组之间的交集，场景举例：表 `student` 中有一个数组类型的字段 `hobbies`，用来记录某个学生的所有业余爱好，此时想要查询业余爱好中包含羽毛球、篮球、吉他的所有学生，即入参为数组 `hobbiesFilter`：`['羽毛球', '篮球', '吉他']`。"
+cover:
+  image: "/covers/efcore-array-intersect.svg"
+  alt: "EF Core 查询数组字段交集封面"
+  relative: false
 date: 2023-03-12T15:00:14+08:00
 lastmod: 2023-03-12T15:00:14+08:00
 draft: false

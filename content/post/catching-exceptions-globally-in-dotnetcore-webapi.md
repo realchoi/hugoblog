@@ -1,6 +1,12 @@
 ---
 title: "在 Asp.Net Core WebApi 中全局捕获异常"
 slug: "catching-exceptions-globally-in-dotnetcore-webapi"
+description: "介绍 Asp.Net Core WebApi 全局异常捕获的实现方式，统一处理错误响应。"
+summary: "介绍 Asp.Net Core WebApi 全局异常捕获的实现方式，统一处理错误响应。"
+cover:
+  image: "/covers/catching-exceptions-globally-in-dotnetcore-webapi.svg"
+  alt: "在 Asp.Net Core WebApi 中全局捕获异常封面"
+  relative: false
 tags: [dotNET, dotNET Core, WebApi]
 categories: [技术]
 date: 2022-11-15T21:54:08+08:00
@@ -29,11 +35,11 @@ draft: false
 
 下图是官方用来解释过滤器在 HTTP 请求管道中的位置，可以看到过滤器是在中间件执行之后才会到达。
 
-![](https://s3.bmp.ovh/imgs/2022/11/15/97efaf0c3dd51e43.png)
+![ASP.NET Core 过滤器在请求管道中的位置示意图](https://s3.bmp.ovh/imgs/2022/11/15/97efaf0c3dd51e43.png)
 
 当然，过滤器也不只一种，而是由很多种，下面是从网上找来的一张表示过滤器执行顺序的图片：
 
-![](https://s3.bmp.ovh/imgs/2022/11/15/3d78155dcadd1cd1.jpg)
+![ASP.NET Core 过滤器执行顺序示意图](https://s3.bmp.ovh/imgs/2022/11/15/3d78155dcadd1cd1.jpg)
 
 现在来看一下这两种方法怎么实现。
 

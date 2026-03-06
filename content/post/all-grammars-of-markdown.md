@@ -1,13 +1,20 @@
 ---
 title: "Markdown 完整版语法手册"
 slug: "all-grammars-of-markdown"
+description: "汇总 Markdown 常用与扩展语法，适合作为写博客和整理文档时的速查手册。"
+summary: "汇总 Markdown 常用与扩展语法，适合作为写博客和整理文档时的速查手册。"
+cover:
+  image: "/covers/all-grammars-of-markdown.svg"
+  alt: "Markdown 完整版语法手册封面"
+  relative: false
 tags: [Markdown]
 categories: [技术]
 date: 2017-07-23T19:15:33+08:00
+lastmod: 2017-07-23T19:15:33+08:00
 draft: false
 ---
 
-![](https://ws1.sinaimg.cn/large/005Ib0ZLgy1fjc8nfo0azj30p00gomy7.jpg)
+![Markdown 语法手册配图](https://ws1.sinaimg.cn/large/005Ib0ZLgy1fjc8nfo0azj30p00gomy7.jpg)
 
 ## Markdown 简介
 

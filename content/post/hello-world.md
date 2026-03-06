@@ -2,6 +2,13 @@
 title: "Hello, World!"
 slug: "hello-world"
 date: 2017-05-01
+lastmod: 2017-05-01
+description: "记录个人建站心路和博客缘起，作为这个站点向世界打的第一声招呼。"
+summary: "记录个人建站心路和博客缘起，作为这个站点向世界打的第一声招呼。"
+cover:
+  image: "/covers/hello-world.svg"
+  alt: "Hello World 博客封面"
+  relative: false
 tags: 
   - GitHub Pages
   - Hexo

@@ -2,6 +2,13 @@
 title: 使用 Java 实现 ArrayList
 slug: "implement-arraylist-in-java"
 date: 2018-05-02
+lastmod: 2018-05-02
+description: "用 Java 手写 ArrayList，梳理动态数组的底层结构、扩容机制与常见操作。"
+summary: "用 Java 手写 ArrayList，梳理动态数组的底层结构、扩容机制与常见操作。"
+cover:
+  image: "/covers/implement-arraylist-in-java.svg"
+  alt: "使用 Java 实现 ArrayList 封面"
+  relative: false
 tags: 
   - 数据结构
   - ArrayList

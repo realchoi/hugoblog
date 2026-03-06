@@ -12,6 +12,10 @@ keywords:
 - 深信服 VPN Docker 容器化
 description: "详解如何利用 OrbStack 和 Docker 隔离 aTrust VPN，配合 Clash Tun 模式彻底解决 macOS 下的路由冲突。实现同时流畅访问公司内网和 Google Antigravity 服务的终极网络方案。"
 summary: "在 macOS 上同时使用 aTrust（深信服 VPN）和 Clash Tun 模式往往会导致路由表打架，造成内外网只能“二选一”。本文记录了如何通过 docker-easyconnect 将 VPN 封装在容器中，利用 OrbStack 优秀的网络桥接特性将其转化为一个 SOCKS5 Proxy，最后由宿主机 Clash 统一接管流量。这不仅完美解决了内网访问冲突，还搞定了 Google Antigravity 等必须依赖 Tun 模式或强制代理才能正常使用的难题，实现了真正的“无感”全网通开发环境。"
+cover:
+  image: "/covers/macos-atrust-clash-docker.svg"
+  alt: "aTrust 与 Clash Tun 冲突解决指南封面"
+  relative: false
 date: 2025-11-26T11:01:32+08:00
 lastmod: 2025-11-26T11:01:32+08:00
 draft: false 
@@ -169,7 +173,7 @@ docker exec -it atrust ping <你公司内网的某个IP>
 
 我使用 FlClash 这款软件，可以直接在 **配置** 页面添加脚本：
 
-![](https://s3.bmp.ovh/imgs/2025/11/26/a7ce49b9efa095b5.png)
+![FlClash 配置页面添加脚本截图](https://s3.bmp.ovh/imgs/2025/11/26/a7ce49b9efa095b5.png)
 
 新增脚本，然后直接填写如下代码：
 
@@ -261,14 +265,14 @@ function main(config) {
 
 1. **Proxies 设置**：添加 `127.0.0.1:7890` (Clash HTTP 端口) 为主代理。
 
-![](https://s3.bmp.ovh/imgs/2025/11/26/880ea1d50f9a84ee.png)
+![Proxifier 添加代理服务器截图](https://s3.bmp.ovh/imgs/2025/11/26/880ea1d50f9a84ee.png)
 
 2. **Rules 设置**：
 
 - Application: `com.google.antigravity.helper;com.google.antigravity;Antigravity;language_server_macos_arm;` (根据实际进程名添加，如果是 Intel 芯片的 Mac，则需要将最后一项改为 `language_server_macos_x64`)
 - Action: `Proxy HTTP 127.0.0.1:7890`
 
-![](https://s3.bmp.ovh/imgs/2025/11/26/ac5d8fa967b78e43.png)
+![Proxifier 配置进程代理规则截图](https://s3.bmp.ovh/imgs/2025/11/26/ac5d8fa967b78e43.png)
 
 这样能在不开启 Tun 的情况下，强行让 Antigravity 走代理。但这种方式需要多开一个 Proxifier App，所以个人更推荐方案 A。
 

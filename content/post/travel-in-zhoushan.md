@@ -2,6 +2,13 @@
 title: 舟山行
 slug: "travel-in-zhoushan"
 date: 2018-04-20
+lastmod: 2018-04-20
+description: "记录一次和朋友去舟山旅行的见闻与心情，多图分享沿途风景和假期片段。"
+summary: "记录一次和朋友去舟山旅行的见闻与心情，多图分享沿途风景和假期片段。"
+cover:
+  image: "/covers/travel-in-zhoushan.svg"
+  alt: "舟山行旅行封面"
+  relative: false
 tags: 
   - 旅行
   - 随笔
@@ -19,7 +26,7 @@ draft: false
 
 印象中的海景房，碧海蓝天小别墅，想想就很高大上，所以我们特意预定了海边的酒店，当两天海景房的主人，美滋滋啊😋。跟着导航找到酒店的时候，一股海水的腥味扑面而来，emmm...是这个感觉👌。偷偷地看了两眼酒店，不明觉厉。
 
-![](https://i.loli.net/2018/07/29/5b5dcaa69261e.jpg)
+![舟山海边酒店外观](https://i.loli.net/2018/07/29/5b5dcaa69261e.jpg)
 
 <center>*酒店初窥*</center>
 
@@ -29,7 +36,7 @@ draft: false
 
 环顾一下四周，环境好像也还可以。
 
-![](https://i.loli.net/2018/07/29/5b5dce53a3315.jpg)
+![酒店外的圆形水池](https://i.loli.net/2018/07/29/5b5dce53a3315.jpg)
 
 <center>*酒店外的水池*</center>
 
@@ -37,7 +44,7 @@ draft: false
 
 正值花季。
 
-![](https://i.loli.net/2018/07/29/5b5dcd9a728b9.jpg)
+![酒店门口盛开的花树](https://i.loli.net/2018/07/29/5b5dcd9a728b9.jpg)
 
 <center>*酒店门口的樱花还是桃花来着👍*</center>
 
@@ -45,7 +52,7 @@ draft: false
 
 此时的我们已经迫不及待了，赶紧冲向电梯，来到位于 11 层的属于我们的海景房，一睹大海的风采。
 
-![](https://i.loli.net/2018/07/29/5b5dcf7e8f9a3.jpg)
+![海景房阳台望出去的海面](https://i.loli.net/2018/07/29/5b5dcf7e8f9a3.jpg)
 
 <center>*真的不想给它写说明🙄*</center>
 
@@ -57,7 +64,7 @@ draft: false
 
 先到海边看看吧，毕竟对于生长在内陆的~~孩子~~大哥大姐们来说，海还是比较新奇的。嗯，人还有点多，风也挺大的。
 
-![](https://s1.ax2x.com/2018/07/29/53AQgA.jpg)
+![舟山海边步道与海景](https://s1.ax2x.com/2018/07/29/53AQgA.jpg)
 
 <center>*这张是我拍的，有点辣眼睛🙃*</center>
 
@@ -65,7 +72,7 @@ draft: false
 
 沿着海边走......
 
-![](https://s1.ax2x.com/2018/07/29/53Ajaq.jpg) 
+![海边步行时拍下的沿岸风景](https://s1.ax2x.com/2018/07/29/53Ajaq.jpg) 
 
 <center>*搭配一下还是能接受的*</center>
 
@@ -73,7 +80,7 @@ draft: false
 
 对了，舟山佛教文化很是浓厚，所以到处都能看到佛教的一些符号，比如下面的。
 
-![](https://s1.ax2x.com/2018/07/29/53AdQO.jpg)
+![舟山景区里的回头是岸石刻](https://s1.ax2x.com/2018/07/29/53AdQO.jpg)
 
 <center>*“回头是岸”*</center>
 
@@ -83,19 +90,19 @@ draft: false
 
 总的来说，一路上的风景还是挺不错的，打消了海景房带来的不开心。来几张美图😀。
 
-![](https://s1.ax2x.com/2018/07/29/53AJUy.jpg)
+![山路旁孤独的树](https://s1.ax2x.com/2018/07/29/53AJUy.jpg)
 
 <center>*暂且叫它“孤独的树”🧐*</center>
 
 <br/>
 
-![](https://s1.ax2x.com/2018/07/29/53AvQl.jpg)
+![铃铛形状的景区路灯](https://s1.ax2x.com/2018/07/29/53AvQl.jpg)
 
 <center>*铃铛🔔状的路灯*</center>
 
 <br/>
 
-![](https://s1.ax2x.com/2018/07/29/53APiB.jpg)
+![很有意境的海边小道](https://s1.ax2x.com/2018/07/29/53APiB.jpg)
 
 <center>*很有意境的小道*</center>
 
@@ -105,7 +112,7 @@ draft: false
 
 噢等等，来到大佛像周围的时候，简直人山人海，烧纸烧香的、瞻仰的、下跪的......
 
-![](https://s1.ax2x.com/2018/07/29/53A4Oi.jpg)
+![舟山景区里的大型佛像](https://s1.ax2x.com/2018/07/29/53A4Oi.jpg)
 
 <center>*好大一座佛像*</center>
 
@@ -115,7 +122,7 @@ draft: false
 
 夜晚站在 11 楼的阳台上，~~开心~~煎熬地看着美丽的夜景......
 
-![](https://s1.ax2x.com/2018/07/29/53AcX6.jpg)
+![夜晚从海景房阳台看到的灯光夜景](https://s1.ax2x.com/2018/07/29/53AcX6.jpg)
 
 <center>*很美...🙂*</center>
 
@@ -125,10 +132,10 @@ draft: false
 
 最后来张合照？好的。
 
-![](https://s1.ax2x.com/2018/07/29/53AL9K.jpg)
+![舟山旅行朋友合照](https://s1.ax2x.com/2018/07/29/53AL9K.jpg)
 
 有一对是情侣哦，mmp 吃了两天的狗粮，人间不值得。😑
 
 拍照的在这，最前面那位~
 
-![](https://i.loli.net/2018/08/05/5b65cf4dd4035.jpg)
+![拍摄合照的朋友本人](https://i.loli.net/2018/08/05/5b65cf4dd4035.jpg)
