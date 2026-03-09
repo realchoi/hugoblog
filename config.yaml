@@ -110,6 +110,7 @@ params:
   cover:
     hidden: false # hide everywhere but not in structured data
     hiddenInList: false # hide on list pages and home
+    hiddenInTermList: false # hide on taxonomy term lists such as tags/categories
     hiddenInSingle: true # hide on single page
 
   #editPost:

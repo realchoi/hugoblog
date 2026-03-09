@@ -59,6 +59,9 @@
 {{- $class = "first-entry" }}
 {{- else if $term }}
 {{- $class = "post-entry tag-entry" }}
+{{- if (site.Params.cover.hiddenInTermList | default false) }}
+{{- $class = printf "%s tag-entry--cover-hidden" $class }}
+{{- end }}
 {{- end }}
 
 <article class="{{ $class }}">
