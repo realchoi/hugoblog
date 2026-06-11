@@ -138,9 +138,9 @@ menu:
       name: 🏷️标签
       url: /tags/
       weight: 20
-    - identifier: about
-      name: 🐼关于我
-      url: /about/
+    - identifier: works
+      name: 🖼️作品
+      url: /works/picser/
       weight: 30
     - identifier: friend
       name: 👫友链
