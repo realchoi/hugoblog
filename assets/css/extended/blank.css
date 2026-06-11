@@ -403,7 +403,12 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     }
 }
 /* Picser 作品页样式 end */
-/* 友链 end */
+/* 暗色主题下反转 logo（黑色笔画 → 白色），解决暗色背景下看不清的问题 start */
+.dark .logo a img {
+    filter: invert(1);
+}
+/* 暗色主题下反转 logo end */
+
 /* 首页与列表页封面微调 */
 .list .post-entry,
 .list .first-entry {
