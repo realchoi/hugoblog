@@ -1,7 +1,7 @@
 ---
 title: "Debian 13 VPS 安全加固与 Xray VLESS + REALITY 手动部署"
 slug: "debian-13-xray-vless-reality-hardening"
-tags: [Debian, VPS, SSH, Xray, VLESS, REALITY, Nginx, Fail2Ban]
+tags: [Debian, VPS, SSH, Xray, VLESS, REALITY, Nginx, Fail2Ban, BBR]
 categories: [技术, VPS]
 keywords:
 - Debian 13 安全加固
@@ -10,6 +10,7 @@ keywords:
 - Xray VLESS REALITY
 - Nginx
 - Fail2Ban
+- BBR
 - Cloudflare DNS
 - acme.sh
 description: "从 SSH 密钥登录、UFW 与 Fail2Ban 开始，加固一台新的 Debian 13 VPS，再手动部署 Xray VLESS + REALITY、Nginx 回落站点与客户端配置。"
@@ -19,7 +20,7 @@ cover:
   alt: "Debian 13 VPS 安全加固与 Xray VLESS + REALITY 手动部署封面"
   relative: false
 date: 2026-07-18T14:00:00+08:00
-lastmod: 2026-07-18T15:05:00+08:00
+lastmod: 2026-07-20T09:04:48+08:00
 draft: false
 ---
 
@@ -67,7 +68,7 @@ ACME 邮箱：user@example.com
 - `443/tcp`：Xray REALITY；
 - `8443/tcp`：只监听回环地址，**不要对公网放行**。
 
-## 第一部分：Debian 13 与 SSH 安全加固
+## 第一部分：Debian 13 系统与 SSH 安全加固
 
 ### 1. 保留旧会话，先创建普通管理员用户
 
@@ -149,7 +150,69 @@ sudo dpkg --audit
 test -f /var/run/reboot-required && cat /var/run/reboot-required
 ```
 
-### 4. 备份 SSH 配置
+### 4. 启用 BBR 并将 fq 设为默认队列规则（可选）
+
+BBR 是 Linux 的 TCP 拥塞控制算法，`fq` 是发送端队列规则。它们属于系统级网络调优，会影响之后新建的 TCP 连接。实际收益取决于线路质量、带宽限制和网络拥塞情况，不应把它理解为所有 VPS 都能获得固定幅度的“加速”。
+
+Debian 13 官方内核基于 Linux 6.12，通常已经包含 BBR；但部分 VPS 使用服务商定制内核，因此应以当前机器的检测结果为准：
+
+```bash
+uname -r
+sysctl \
+  net.ipv4.tcp_available_congestion_control \
+  net.ipv4.tcp_congestion_control \
+  net.core.default_qdisc
+```
+
+如果 `net.ipv4.tcp_available_congestion_control` 中没有 `bbr`，先尝试加载模块：
+
+```bash
+sudo modprobe tcp_bbr
+sysctl net.ipv4.tcp_available_congestion_control
+lsmod | grep -w tcp_bbr || true
+```
+
+只要可用算法列表中已经出现 `bbr`，就可以继续。若 `modprobe` 报错，先确认当前内核及其配套模块是否完整，不要仅为启用 BBR 盲目更换第三方内核。
+
+使用独立的 sysctl 配置文件，避免直接修改 `/etc/sysctl.conf`：
+
+```bash
+sudo tee /etc/sysctl.d/99-bbr.conf >/dev/null <<'EOF'
+net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+EOF
+
+sudo sysctl -p /etc/sysctl.d/99-bbr.conf
+```
+
+验证配置值：
+
+```bash
+sysctl net.ipv4.tcp_congestion_control
+sysctl net.core.default_qdisc
+```
+
+预期输出：
+
+```text
+net.ipv4.tcp_congestion_control = bbr
+net.core.default_qdisc = fq
+```
+
+再检查默认路由对应网卡当前实际使用的 qdisc：
+
+```bash
+DEFAULT_IF=$(ip -o route show default | awk 'NR == 1 {print $5}')
+printf 'Default interface: %s\n' "$DEFAULT_IF"
+tc qdisc show dev "$DEFAULT_IF"
+lsmod | grep -w tcp_bbr || true
+```
+
+`net.core.default_qdisc` 指定的是新建队列时采用的默认值，不一定会立刻替换网卡上已经存在的 qdisc；多队列网卡还可能显示以 `mq` 为根、`fq` 为叶子。较新的内核已经支持 TCP 层 pacing，BBR 不再严格依赖 `fq` 才能工作，因此不建议在远程 SSH 会话中为了立即替换 qdisc 而冒险重启网络。后续维护窗口重启系统或重建网络接口后，再用 `tc qdisc show` 复核即可。
+
+`tcp_congestion_control` 会用于新建 TCP 连接，不需要重启服务器。现有长连接可能继续沿用建立时的拥塞控制设置，重新连接后就会采用新的默认值。即使 `lsmod` 没有输出，也不一定表示失败：部分内核可能把 BBR 直接编译进内核，应以 sysctl 的可用算法与当前配置值为准。
+
+### 5. 备份 SSH 配置
 
 ```bash
 sudo mkdir -p /root/ssh-hardening-backup
@@ -160,7 +223,7 @@ sudo cp -a /etc/ssh/sshd_config.d \
 sudo ls -lah /root/ssh-hardening-backup
 ```
 
-### 5. 先放行新端口，再启用 UFW
+### 6. 先放行新端口，再启用 UFW
 
 先到云厂商控制台放行 `42345/tcp`，然后在服务器执行：
 
@@ -188,7 +251,7 @@ sudo ufw allow from YOUR_PUBLIC_IP \
 
 家庭宽带公网 IP 经常变化时不要这样做，否则可能把自己挡在服务器外。
 
-### 6. 使用 drop-in 加固 sshd
+### 7. 使用 drop-in 加固 sshd
 
 Debian 会在主配置开头加载 `/etc/ssh/sshd_config.d/*.conf`。OpenSSH 对大多数选项采用“首次取值生效”，而通配文件又按字典序加载，因此这里使用 `00-hardening.conf`。
 
@@ -213,7 +276,7 @@ EOF
 PermitRootLogin prohibit-password
 ```
 
-### 7. 先验证，再重新加载
+### 8. 先验证，再重新加载
 
 检查语法：
 
@@ -265,7 +328,7 @@ sudo systemctl reload ssh
 sudo journalctl -u ssh -n 80 --no-pager
 ```
 
-### 8. 用第二个终端验证新登录方式
+### 9. 用第二个终端验证新登录方式
 
 在本地新开一个终端：
 
@@ -300,7 +363,7 @@ sudo ufw status verbose
 
 同时删除云厂商安全组中的 `22/tcp` 入站规则。
 
-### 9. 配置 Fail2Ban
+### 10. 配置 Fail2Ban
 
 不要直接修改 Fail2Ban 自带的 `.conf` 文件，把本地覆盖写入 `.local`：
 
@@ -335,7 +398,7 @@ sudo fail2ban-client status
 sudo fail2ban-client status sshd
 ```
 
-### 10. 配置本地 SSH 别名
+### 11. 配置本地 SSH 别名
 
 在本地编辑 `~/.ssh/config`：
 
@@ -920,6 +983,7 @@ sudo systemctl --no-pager --full status ssh fail2ban nginx xray
 sudo fail2ban-client status sshd
 sudo nginx -t
 sudo xray run -test -config /usr/local/etc/xray/config.json
+sudo sysctl net.ipv4.tcp_congestion_control net.core.default_qdisc
 sudo ss -tulpen | grep -E ':(80|443|8443|42345)\s'
 sudo ufw status verbose
 ```
@@ -987,3 +1051,6 @@ sudo journalctl -u xray -n 100 --no-pager
 - [Project X：传输配置](https://xtls.github.io/config/transport.html)
 - [XTLS/Xray-install](https://github.com/XTLS/Xray-install)
 - [acme.sh](https://github.com/acmesh-official/acme.sh)
+- [Linux 内核文档：IP sysctl](https://www.kernel.org/doc/html/latest/networking/ip-sysctl.html)
+- [Linux 内核文档：`default_qdisc`](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/net.html#default-qdisc)
+- [Google BBR：Quick Start](https://github.com/google/bbr/blob/master/Documentation/bbr-quick-start.md)
