@@ -1,0 +1,93 @@
+{{- $reward := site.Params.reward -}}
+{{- $sections := $reward.sections | default (slice "post") -}}
+{{- $isEnabled := and ($reward.enabled | default false) .IsPage (in $sections .Section) (ne .Params.reward false) -}}
+
+{{- if $isEnabled -}}
+{{- $dialogID := printf "reward-dialog-%s" (md5 .RelPermalink) -}}
+{{- $titleID := printf "%s-title" $dialogID -}}
+{{- $descriptionID := printf "%s-description" $dialogID -}}
+{{- $noticeID := printf "%s-notice" $dialogID -}}
+{{- $title := $reward.title | default "感谢你的支持" -}}
+{{- $description := $reward.description | default "如果这篇文章对你有所帮助，可以请我喝杯咖啡。" -}}
+{{- $buttonText := $reward.buttonText | default "赞赏作者" -}}
+{{- $notice := $reward.notice | default "赞赏完全自愿，不影响任何内容的正常阅读。" -}}
+{{- $imageMissingText := $reward.imageMissingText | default "二维码暂未放置，请稍后再试。" -}}
+
+<section class="reward" data-reward-root aria-label="支持作者">
+  <p class="reward__message">{{ $description }}</p>
+  <button class="reward__button" type="button" data-reward-open aria-haspopup="dialog" aria-controls="{{ $dialogID }}">
+    <svg class="reward__button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5 8h11v7a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5V8Z" />
+      <path d="M16 10h1.5a3 3 0 0 1 0 6H16M8 4c0 1 1 1.5 1 2.5M12 4c0 1 1 1.5 1 2.5" />
+    </svg>
+    <span>{{ $buttonText }}</span>
+  </button>
+  <noscript>
+    <p class="reward__noscript">{{ $notice }}</p>
+  </noscript>
+
+  <div class="reward-modal" data-reward-modal data-state="closed" aria-hidden="true" hidden>
+    <div class="reward-modal__backdrop" data-reward-backdrop aria-hidden="true"></div>
+    <div
+      class="reward-modal__dialog"
+      id="{{ $dialogID }}"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="{{ $titleID }}"
+      aria-describedby="{{ $descriptionID }} {{ $noticeID }}"
+      tabindex="-1">
+      <header class="reward-modal__header">
+        <div>
+          <p class="reward-modal__title" id="{{ $titleID }}" role="heading" aria-level="2">{{ $title }}</p>
+          <p class="reward-modal__description" id="{{ $descriptionID }}">{{ $description }}</p>
+        </div>
+        <button class="reward-modal__close" type="button" data-reward-close aria-label="关闭赞赏弹窗">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="reward-modal__methods">
+        {{- range $index, $method := $reward.methods }}
+        {{- $methodName := $method.name | default (printf "赞赏方式 %d" (add $index 1)) -}}
+        <figure class="reward-modal__method">
+          <div class="reward-modal__qr-frame">
+            {{- with $method.image }}
+            <img
+              class="reward-modal__qr"
+              src="{{ . }}"
+              alt="{{ $method.alt | default (printf "%s赞赏二维码" $methodName) }}"
+              width="220"
+              height="220"
+              loading="lazy"
+              decoding="async"
+              data-reward-image>
+            <p class="reward-modal__image-fallback" data-reward-image-fallback hidden>{{ $imageMissingText }}</p>
+            {{- else }}
+            <p class="reward-modal__image-fallback">{{ $imageMissingText }}</p>
+            {{- end }}
+          </div>
+          <figcaption class="reward-modal__method-name">{{ $methodName }}</figcaption>
+          {{- with $method.url }}
+          <a class="reward-modal__method-link" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+            {{ $method.linkText | default (printf "前往%s" $methodName) }}
+          </a>
+          {{- end }}
+        </figure>
+        {{- end }}
+      </div>
+
+      <p class="reward-modal__notice" id="{{ $noticeID }}">{{ $notice }}</p>
+    </div>
+  </div>
+
+  {{- $script := resources.Get "js/reward.js" | resources.Minify -}}
+  {{- if not site.Params.assets.disableFingerprinting -}}
+    {{- $script = $script | fingerprint -}}
+    <script defer crossorigin="anonymous" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+  {{- else -}}
+    <script defer crossorigin="anonymous" src="{{ $script.RelPermalink }}"></script>
+  {{- end }}
+</section>
+{{- end -}}

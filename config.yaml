@@ -55,6 +55,22 @@ params:
   showtoc: true
   tocopen: true
 
+  reward:
+    enabled: true
+    sections: [post]
+    title: "感谢你的支持"
+    description: "如果这篇文章对你有所帮助，可以请我喝杯咖啡。"
+    buttonText: "赞赏作者"
+    notice: "赞赏完全自愿，不影响任何内容的正常阅读。"
+    imageMissingText: "二维码暂未放置，请稍后再试。"
+    methods:
+      - name: "微信支付"
+        image: "/images/reward/wechat-qr.png"
+        alt: "微信赞赏二维码"
+      - name: "支付宝"
+        image: "/images/reward/alipay-qr.png"
+        alt: "支付宝赞赏二维码"
+
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
