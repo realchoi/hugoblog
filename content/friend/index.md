@@ -15,4 +15,4 @@ disableShare: true
 
 {{< friend name="囧囧 JOJO" url="https://blog.jojo.host/?source=smc_im" logo="https://blog.jojo.host/assets/images/favicons/favicon.png" word="囧囧 JOJO" >}}
 
-🤖如想交换友链，可以发送邮件到 meetcds(AT)foxmail.com 联系我~
+🤖如想交换友链，可以发送邮件到 dscai.im(AT)gmail.com 联系我~

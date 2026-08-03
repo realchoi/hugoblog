@@ -111,7 +111,7 @@ params:
     - name: github
       url: "https://github.com/realchoi"
     - name: email
-      url: "mailto:meetcds@foxmail.com"
+      url: "mailto:dscai.im@gmail.com"
     - name: RSS
       url: "index.xml"
 
