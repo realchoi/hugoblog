@@ -1,0 +1,18 @@
+{{- if .IsPage -}}
+<dialog class="image-lightbox" data-image-lightbox aria-label="图片预览">
+  <button class="image-lightbox__close" type="button" data-image-lightbox-close aria-label="关闭图片预览">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="m6 6 12 12M18 6 6 18" />
+    </svg>
+  </button>
+  <img class="image-lightbox__preview" data-image-lightbox-preview alt="">
+</dialog>
+
+{{- $script := resources.Get "js/image-lightbox.js" | resources.Minify -}}
+{{- if not site.Params.assets.disableFingerprinting -}}
+  {{- $script = $script | fingerprint -}}
+  <script defer crossorigin="anonymous" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{- else -}}
+  <script defer crossorigin="anonymous" src="{{ $script.RelPermalink }}"></script>
+{{- end -}}
+{{- end -}}
