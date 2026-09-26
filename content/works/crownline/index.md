@@ -25,7 +25,6 @@ comments: false
     <p class="work-lead">唐朝建立的时候，西边的拜占庭在做什么？奥斯曼帝国和明朝重叠了多少年？把这些问题摊在一条时间轴上，一眼就能看明白。</p>
     <div class="work-actions">
       <a class="work-cta-primary" href="https://smc.im/crownline/" target="_blank" rel="noopener noreferrer">在线打开</a>
-      <a href="https://github.com/realchoi/crownline" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </div>
   <div class="work-hero-media" aria-label="Crownline timeline preview">
@@ -73,7 +72,7 @@ comments: false
 
 <section class="work-section work-note">
   <h2>更多</h2>
-  <p>目前中国历代王朝已作为完整基线收录，世界其他地区还只是代表性样本，会在后续版本里逐步补全。直接去 <a href="https://smc.im/crownline/" target="_blank" rel="noopener noreferrer">Crownline</a> 上逛逛吧；数据纠错、资料来源或功能建议，也欢迎到 <a href="https://github.com/realchoi/crownline" target="_blank" rel="noopener noreferrer">GitHub</a> 提 Issue。</p>
+  <p>目前中国历代王朝已作为完整基线收录，世界其他地区还只是代表性样本，会在后续版本里逐步补全。直接去 <a href="https://smc.im/crownline/" target="_blank" rel="noopener noreferrer">Crownline</a> 上逛逛吧。</p>
 </section>
 
 </div>
