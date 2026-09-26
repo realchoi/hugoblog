@@ -4,6 +4,11 @@ description: "Picser 是我做的一款 macOS 看图软件：打开一个文件�
 summary: "我做的一款 macOS 看图软件，打开文件夹就能翻图、看细节、裁剪导出、用标签整理。"
 date: 2026-06-09T17:00:00+08:00
 lastmod: 2026-06-09T17:00:00+08:00
+weight: 10
+platform: "macOS App"
+cover:
+  image: "/works/picser/index-1600.jpg"
+  alt: "Picser macOS app interface screenshot"
 ShowReadingTime: false
 ShowWordCount: false
 showtoc: false

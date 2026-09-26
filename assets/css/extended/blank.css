@@ -232,22 +232,37 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     }
 }
 
-/* Picser 作品页样式 start */
+/* 作品页样式 start */
 :root {
-    --picser-accent: #256d7b;
-    --picser-accent-ink: #fff;
+    --work-accent: #256d7b;
+    --work-accent-ink: #fff;
     /* 浅色主题下专用：边框、卡片底色比默认更可见 */
-    --picser-surface: #f6f8f9;
-    --picser-border: #d4dde0;
-    --picser-border-strong: #b9c7cb;
+    --work-surface: #f6f8f9;
+    --work-border: #d4dde0;
+    --work-border-strong: #b9c7cb;
 }
 
 .dark {
-    --picser-accent: #58a7b6;
-    --picser-accent-ink: #111;
-    --picser-surface: var(--entry);
-    --picser-border: var(--border);
-    --picser-border-strong: var(--border);
+    --work-accent: #58a7b6;
+    --work-accent-ink: #111;
+    --work-surface: var(--entry);
+    --work-border: var(--border);
+    --work-border-strong: var(--border);
+}
+
+/* Crownline 作品页沿用其站点的朱红主色 */
+.work-theme-crownline {
+    --work-accent: #8b2f2f;
+    --work-surface: #faf6f3;
+    --work-border: #e6dbd4;
+    --work-border-strong: #d3c3b9;
+}
+
+.dark .work-theme-crownline {
+    --work-accent: #d9766f;
+    --work-surface: var(--entry);
+    --work-border: var(--border);
+    --work-border-strong: var(--border);
 }
 
 .work-hero {
@@ -300,9 +315,9 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     min-width: 180px;
     min-height: 44px;
     padding: 0 20px;
-    border: 1px solid var(--picser-border-strong);
+    border: 1px solid var(--work-border-strong);
     border-radius: 8px;
-    background: var(--picser-surface);
+    background: var(--work-surface);
     color: var(--primary);
     box-shadow: none;
     font-size: 0.95rem;
@@ -311,19 +326,19 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 }
 
 .work-actions a:hover {
-    border-color: var(--picser-accent);
-    color: var(--picser-accent);
+    border-color: var(--work-accent);
+    color: var(--work-accent);
 }
 
 /* 单一强调点：主 CTA（App Store 下载）实心青色，官网为次级描边 */
 .work-actions a.work-cta-primary {
-    border-color: var(--picser-accent);
-    background: var(--picser-accent);
-    color: var(--picser-accent-ink);
+    border-color: var(--work-accent);
+    background: var(--work-accent);
+    color: var(--work-accent-ink);
 }
 
 .work-actions a.work-cta-primary:hover {
-    color: var(--picser-accent-ink);
+    color: var(--work-accent-ink);
     filter: brightness(1.08);
 }
 
@@ -355,9 +370,9 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .work-grid article {
     min-height: 168px;
     padding: 20px;
-    border: 1px solid var(--picser-border);
+    border: 1px solid var(--work-border);
     border-radius: 8px;
-    background: var(--picser-surface);
+    background: var(--work-surface);
 }
 
 .work-grid h3 {
@@ -378,7 +393,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 .work-note {
     padding-top: 22px;
-    border-top: 1px solid var(--picser-border);
+    border-top: 1px solid var(--work-border);
 }
 
 @media screen and (max-width: 900px) {
@@ -402,7 +417,89 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
         justify-content: center;
     }
 }
-/* Picser 作品页样式 end */
+/* 作品页内的整幅截图 */
+.work-figure {
+    margin: 40px 0;
+}
+
+.work-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.work-figure figcaption {
+    margin-top: 10px;
+    color: var(--secondary);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* 作品列表页：每个作品一张卡片 */
+.works-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.works-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 6px);
+    background: var(--entry);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    transition: transform 0.1s;
+}
+
+.works-card:active {
+    transform: scale(0.98);
+}
+
+.works-card-media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+
+.works-card-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+}
+
+.works-card-body {
+    padding: 18px 22px 22px;
+}
+
+.works-card-platform {
+    margin: 0 0 6px;
+    color: var(--secondary);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+}
+
+.works-card-body h2 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+}
+
+.works-card-body p:last-child {
+    margin: 0;
+    color: var(--secondary);
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 720px) {
+    .works-list {
+        grid-template-columns: 1fr;
+    }
+}
+/* 作品页样式 end */
 /* 暗色主题下反转 logo（黑色笔画 → 白色），解决暗色背景下看不清的问题 start */
 .dark .logo a img {
     filter: invert(1);

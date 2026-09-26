@@ -156,7 +156,7 @@ menu:
       weight: 20
     - identifier: works
       name: 🖼️作品
-      url: /works/picser/
+      url: /works/
       weight: 30
     - identifier: friend
       name: 👫友链
